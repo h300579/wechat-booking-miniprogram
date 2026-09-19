@@ -1,0 +1,47 @@
+.merchant .title {
+  font-size: 46rpx;
+}
+.strong {
+  font-size: 32rpx;
+  font-weight: 600;
+}
+.metrics {
+  display: flex;
+  gap: 100rpx;
+  padding: 36rpx 0 8rpx;
+}
+.number {
+  font-size: 70rpx;
+  font-weight: 600;
+}
+.service {
+  font-size: 30rpx;
+  margin: 24rpx 0 16rpx;
+}
+.fact {
+  display: flex;
+  justify-content: space-between;
+  gap: 24rpx;
+  margin-top: 30rpx;
+}
+.fact text:first-child {
+  color: #889087;
+}
+.identifier {
+  font-size: 22rpx;
+  color: #889087;
+  word-break: break-all;
+  margin-top: 34rpx;
+}
+.cancelled {
+  opacity: 0.65;
+}
+.actions {
+  margin-top: 24rpx;
+}
+.danger {
+  color: #985440;
+}
+.refresh {
+  margin-top: 38rpx;
+}

@@ -1,0 +1,49 @@
+<view class="page"
+  ><view class="eyebrow">MAKE A RESERVATION</view
+  ><view class="title">选一个，<view></view>刚刚好的时间。</view
+  ><view class="subtitle">{{name}} · {{duration}} 分钟 · ¥{{price}}</view
+  ><view class="section-title">预约日期</view
+  ><picker
+    mode="date"
+    value="{{date}}"
+    start="{{minDate}}"
+    end="{{endDate}}"
+    bindchange="changeDate"
+    disabled="{{pending || submitting}}"
+    ><view class="card row"
+      ><text>{{date}}</text><text class="muted">更换日期 ▾</text></view
+    ></picker
+  ><view class="section-title"
+    >到店时间 <text class="muted">北京时间</text></view
+  ><view wx:if="{{loading}}" class="empty">正在查询空闲时间…</view
+  ><view class="slots"
+    ><view
+      wx:for="{{slots}}"
+      wx:key="startTime"
+      class="slot {{selected === item.startTime ? 'selected' : ''}}"
+      data-time="{{item.startTime}}"
+      bindtap="select"
+      >{{item.label}}</view
+    ></view
+  ><view wx:if="{{!loading && !slots.length && !error}}" class="empty"
+    >这一天暂无可预约时段<view></view>试试其他日期吧</view
+  ><view wx:if="{{error}}" class="error"
+    >{{error}}<button wx:if="{{!pending}}" class="secondary" bindtap="load">
+      刷新时段
+    </button></view
+  ><view wx:if="{{pending}}" class="note"
+    >正在确认这次预约。重试会使用同一预约请求，不会重复下单。也可以先到「我的预约」核对。</view
+  ><button
+    class="button"
+    loading="{{submitting}}"
+    disabled="{{!selected || submitting || (loading && !pending)}}"
+    bindtap="submit"
+  >
+    {{pending ? '确认原预约结果' : '确认预约'}}</button
+  ><button wx:if="{{pending}}" class="secondary" bindtap="my">
+    查看我的预约</button
+  ><view class="note"
+    >可选时段以提交时为准。预约开始前可在线取消。每人最多保留 {{maxFuture}}
+    个未来预约。</view
+  ></view
+>

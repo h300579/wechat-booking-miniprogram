@@ -1,0 +1,12 @@
+{
+  "name": "booking",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "wx-server-sdk": "4.0.2",
+    "@cloudbase/node-sdk": "3.18.3"
+  },
+  "overrides": {
+    "axios@<1": "0.33.0"
+  }
+}

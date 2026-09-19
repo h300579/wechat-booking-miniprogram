@@ -1,0 +1,10 @@
+<view class="page"
+  ><view style="text-align: center; padding: 100rpx 0 40rpx"
+    ><view style="font-size: 90rpx; color: #527b60">✓</view
+    ><view class="title" style="margin-top: 36rpx">时间，为你留好了。</view
+    ><view class="subtitle"
+      >预约已确认<view></view>期待与你到店相见。</view
+    ></view
+  ><button class="button" bindtap="detail">查看预约详情</button
+  ><button class="secondary" bindtap="home">返回首页</button></view
+>

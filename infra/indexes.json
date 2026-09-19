@@ -1,0 +1,12 @@
+{
+  "appointments": [
+    ["userId", "createdAt", "_id"],
+    ["resourceId", "localDate", "status", "startTime"],
+    ["resourceId", "localDate", "status", "_id"],
+    ["resourceId", "localDate", "_id"]
+  ],
+  "rate_limits": [["expiresAt"]],
+  "idempotency_records": [["expiresAt"]],
+  "upload_intents": [["expiresAt"]],
+  "services": [["status", "_id"]]
+}

@@ -1,0 +1,39 @@
+{
+  "pages": [
+    "pages/service/list",
+    "pages/service/detail",
+    "pages/booking/select",
+    "pages/booking/result",
+    "pages/appointment/list",
+    "pages/appointment/detail",
+    "pages/merchant/dashboard",
+    "pages/merchant/list",
+    "pages/merchant/day",
+    "pages/merchant/detail"
+  ],
+  "window": {
+    "navigationBarTitleText": "比例时代 · 预约",
+    "navigationBarBackgroundColor": "#f7f6f2",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#f7f6f2"
+  },
+  "tabBar": {
+    "color": "#8b918d",
+    "selectedColor": "#234e43",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/service/list",
+        "text": "预约服务"
+      },
+      {
+        "pagePath": "pages/appointment/list",
+        "text": "我的预约"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}

@@ -1,0 +1,45 @@
+<view class="page"
+  ><view class="hero"
+    ><view class="eyebrow">{{storeName}}</view
+    ><view class="title">给自己，<view></view>留一刻时间。</view
+    ><view class="subtitle"
+      >选一份喜欢的服务<view></view>把接下来的时间，交给我们。</view
+    ><view class="hero-mark">{{storeMark}}</view
+    ><view class="hero-bottom"
+      ><text>提前预约 · 从容到店</text><text>↗</text></view
+    ></view
+  ><view class="row section-title"
+    ><text>探索服务</text><text class="muted">为你留好每一刻</text></view
+  ><view wx:if="{{isDevelopment}}" class="demo"
+    >开发预览 · 项目与价格为示例</view
+  ><view wx:if="{{error}}" class="error"
+    >{{error}}<button class="secondary" bindtap="load">重新加载</button
+    ><button class="secondary" bindtap="contact">联系门店</button></view
+  ><view wx:if="{{loading}}" class="empty">正在准备服务…</view
+  ><view
+    wx:for="{{services}}"
+    wx:key="_id"
+    class="service-card"
+    bindtap="open"
+    data-id="{{item._id}}"
+    ><view class="service-art art-{{index % 3}}"
+      ><text class="art-number">{{item.number || '·'}}</text
+      ><view class="orb orb-one"></view><view class="orb orb-two"></view
+      ><text class="art-tag">{{item.tag || '预约服务'}}</text></view
+    ><view class="service-body"
+      ><view class="row"
+        ><text class="service-name">{{item.name}}</text
+        ><text class="muted">{{item.durationMinutes}} 分钟</text></view
+      ><view class="service-intro"
+        >{{item.intro || '选择适合你的时间，开启一次到店体验。'}}</view
+      ><view class="row"
+        ><text class="price"><text class="currency">¥</text>{{item.price}}</text
+        ><text class="service-link">了解并预约 ↗</text></view
+      ></view
+    ></view
+  ><button wx:if="{{nextCursor}}" class="secondary" bindtap="more">
+    查看更多</button
+  ><view wx:if="{{!loading && !error && !services.length}}" class="empty"
+    >新服务正在准备中</view
+  ><view class="note">单店专属时段，每一份预约都预留完整服务时间。</view></view
+>

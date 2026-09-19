@@ -1,0 +1,112 @@
+.hero {
+  position: relative;
+  overflow: hidden;
+  background: #e6ebe1;
+  border-radius: 30rpx;
+  padding: 42rpx 36rpx 26rpx;
+  min-height: 380rpx;
+}
+.hero .title {
+  position: relative;
+  z-index: 1;
+}
+.hero-mark {
+  position: absolute;
+  right: 20rpx;
+  top: 105rpx;
+  color: #ced8c6;
+  font-size: 128rpx;
+  font-weight: 200;
+  writing-mode: vertical-rl;
+  letter-spacing: 12rpx;
+}
+.hero-bottom {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1rpx solid #ccd6c7;
+  margin-top: 38rpx;
+  padding-top: 24rpx;
+  font-size: 22rpx;
+  color: #64745e;
+  position: relative;
+}
+.service-card {
+  border-radius: 26rpx;
+  overflow: hidden;
+  background: #fff;
+  margin-top: 28rpx;
+  border: 1rpx solid #e4e9df;
+}
+.service-art {
+  height: 240rpx;
+  position: relative;
+  overflow: hidden;
+  background: #dce4d5;
+}
+.art-1 {
+  background: #e7ddce;
+}
+.art-2 {
+  background: #d5e1de;
+}
+.art-number {
+  position: absolute;
+  left: 30rpx;
+  top: 22rpx;
+  font-size: 36rpx;
+  color: #fff9;
+}
+.art-tag {
+  position: absolute;
+  bottom: 24rpx;
+  left: 30rpx;
+  letter-spacing: 4rpx;
+  font-size: 24rpx;
+  color: #536551;
+}
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  background: #f5f5e8aa;
+  box-shadow: 12rpx 16rpx 28rpx #67745a20;
+}
+.orb-one {
+  width: 200rpx;
+  height: 200rpx;
+  right: 95rpx;
+  top: -25rpx;
+}
+.orb-two {
+  width: 130rpx;
+  height: 130rpx;
+  right: 30rpx;
+  top: 110rpx;
+  background: #a6b49c88;
+}
+.art-1 .orb-two {
+  background: #b59e7a88;
+}
+.art-2 .orb-two {
+  background: #76998b88;
+}
+.service-body {
+  padding: 30rpx;
+}
+.service-name {
+  font-size: 34rpx;
+  font-weight: 600;
+}
+.service-intro {
+  font-size: 24rpx;
+  line-height: 1.8;
+  color: #8c9389;
+  margin: 18rpx 0 24rpx;
+}
+.currency {
+  font-size: 24rpx;
+  margin-right: 4rpx;
+}
+.service-link {
+  font-size: 25rpx;
+  color: #52745c;
+}

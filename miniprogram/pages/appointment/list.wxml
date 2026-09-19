@@ -1,0 +1,39 @@
+<view class="page"
+  ><view class="eyebrow">YOUR MOMENTS</view><view class="title">我的预约</view
+  ><view class="subtitle">每一段为自己预留的时光，都在这里。</view
+  ><view wx:if="{{isMerchant}}" class="card row" bindtap="openMerchant"><text>商家工作台</text><text class="muted">管理预约与接单日期 →</text></view
+  ><view wx:if="{{error}}" class="error"
+    >{{error}}<button class="secondary" bindtap="load">重新加载</button></view
+  ><view
+    wx:for="{{items}}"
+    wx:key="_id"
+    class="card"
+    bindtap="open"
+    data-id="{{item._id}}"
+    ><view class="row"
+      ><text style="font-size: 32rpx; font-weight: 600"
+        >{{item.serviceName}}</text
+      ><text class="badge">{{item.statusLabel}}</text></view
+    ><view class="section-title" style="margin: 30rpx 0 12rpx"
+      >{{item.dateLabel}}</view
+    ><view class="row"
+      ><text>{{item.timeLabel}}</text
+      ><text class="muted">查看详情 →</text></view
+    ></view
+  ><view wx:if="{{loading}}" class="empty">正在加载预约…</view
+  ><view wx:if="{{!loading && !error && !items.length}}" class="empty"
+    >还没有预约<view></view>从一段属于自己的时间开始。<button
+      class="button"
+      bindtap="book"
+    >
+      探索服务
+    </button></view
+  ><button
+    wx:if="{{cursor}}"
+    class="secondary"
+    bindtap="more"
+    loading="{{loading}}"
+  >
+    加载更多
+  </button></view
+>

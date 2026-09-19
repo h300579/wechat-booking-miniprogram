@@ -1,0 +1,42 @@
+<view class="page"
+  ><view class="eyebrow">RESERVATION DETAILS</view
+  ><view class="title">预约详情</view
+  ><view wx:if="{{loading}}" class="empty">正在加载…</view
+  ><view wx:if="{{error}}" class="error"
+    >{{error}}<button class="secondary" bindtap="load">刷新详情</button></view
+  ><block wx:if="{{appointment}}"
+    ><view class="card"
+      ><view class="row"
+        ><text class="section-title" style="margin: 0"
+          >{{appointment.serviceName}}</text
+        ><text class="badge">{{appointment.statusLabel}}</text></view
+      ><view class="detail-line row"
+        ><text class="muted">预约日期</text
+        ><text>{{appointment.dateLabel}}</text></view
+      ><view class="detail-line row"
+        ><text class="muted">到店时间</text
+        ><text>{{appointment.timeLabel}}</text></view
+      ><view class="detail-line row"
+        ><text class="muted">服务时长</text
+        ><text>{{appointment.durationMinutes}} 分钟</text></view
+      ><view class="detail-line row"
+        ><text class="muted">预约时价格</text
+        ><text>¥{{appointment.price}}</text></view
+      ><view class="note"
+        >预约编号：{{appointment._id}}<view></view>时间均为北京时间。请提前 5
+        分钟到店。</view
+      ></view
+    ><button
+      wx:if="{{appointment.canCancel}}"
+      class="secondary"
+      loading="{{cancelling}}"
+      disabled="{{cancelling}}"
+      bindtap="cancel"
+    >
+      取消预约</button
+    ><button class="secondary" bindtap="contact">联系门店</button
+    ><view class="note"
+      >预约开始前可以在线取消，开始后请与门店联系。</view
+    ></block
+  ></view
+>

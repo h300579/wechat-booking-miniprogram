@@ -1,0 +1,20 @@
+.slots {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18rpx;
+}
+.slot {
+  box-sizing: border-box;
+  width: calc((100% - 36rpx) / 3);
+  padding: 26rpx 0;
+  border: 2rpx solid #e0e6dc;
+  border-radius: 16rpx;
+  background: #fff;
+  text-align: center;
+  color: #54715e;
+}
+.slot.selected {
+  background: #234e43;
+  border-color: #234e43;
+  color: #fff;
+}

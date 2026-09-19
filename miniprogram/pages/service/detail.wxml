@@ -1,0 +1,26 @@
+<view class="page"
+  ><view wx:if="{{loading}}" class="empty">正在加载…</view
+  ><view wx:if="{{error}}" class="error"
+    >{{error}}<button class="secondary" bindtap="load">重试</button></view
+  ><block wx:if="{{service}}"
+    ><view class="eyebrow">SERVICE / 专属时光</view
+    ><view class="title">{{service.name}}</view
+    ><view class="subtitle">{{intro}}</view
+    ><view class="card"
+      ><view class="row"
+        ><text class="badge">{{service.durationMinutes}} 分钟完整体验</text
+        ><text class="price">¥{{price}}</text></view
+      ><view class="note">展示价格 · 本小程序暂不提供在线支付</view></view
+    ><view class="section-title">预约须知</view
+    ><view class="card"
+      ><view class="subtitle">{{note}}</view
+      ><view class="detail-line">01　选择日期与到店时间</view
+      ><view class="detail-line">02　提交后即可在「我的预约」查看</view
+      ><view class="detail-line">03　预约开始前，可在线取消</view></view
+    ><view wx:if="{{isDevelopment}}" class="demo"
+      >当前项目为开发示例，正式服务以门店发布为准。</view
+    ><button class="button" disabled="{{!ready || loading}}" bindtap="book">
+      选择预约时间 →
+    </button></block
+  ></view
+>

@@ -1,0 +1,25 @@
+{
+  "environmentId": "",
+  "appId": "",
+  "stage": "production",
+  "storeName": "",
+  "contactPhone": "",
+  "timeZone": "Asia/Shanghai",
+  "monthlyPlanCost": null,
+  "resourceQuota": null,
+  "approvedIndependentCharges": [],
+  "overageEnabled": false,
+  "alarmRecipient": "",
+  "incidentOwner": "",
+  "evidence": {
+    "cloudTransactions": false,
+    "rules": false,
+    "indexes": false,
+    "platformRateLimits": false,
+    "overageDisabled": false,
+    "alerts50_80_90": false,
+    "backupRestore": false,
+    "realDevice": false
+  },
+  "developmentEnvironmentId": ""
+}

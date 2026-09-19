@@ -1,0 +1,120 @@
+page {
+  background: #f7f6f2;
+  color: #243e35;
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", sans-serif;
+  font-size: 28rpx;
+}
+.page {
+  padding: 32rpx 32rpx 64rpx;
+}
+.eyebrow {
+  font-size: 22rpx;
+  color: #858e85;
+  letter-spacing: 4rpx;
+  margin-bottom: 20rpx;
+}
+.title {
+  font-size: 52rpx;
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: 1rpx;
+}
+.subtitle {
+  color: #7c877e;
+  font-size: 26rpx;
+  line-height: 1.8;
+  margin-top: 18rpx;
+}
+.card {
+  background: #fff;
+  border: 1rpx solid #e8ece5;
+  border-radius: 28rpx;
+  padding: 32rpx;
+  margin-top: 24rpx;
+}
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20rpx;
+}
+.muted {
+  color: #889087;
+  font-size: 24rpx;
+}
+.section-title {
+  font-size: 32rpx;
+  font-weight: 600;
+  margin: 40rpx 0 20rpx;
+}
+.price {
+  font-size: 40rpx;
+  font-weight: 500;
+  color: #234e43;
+}
+.button {
+  background: #234e43;
+  color: #fff;
+  border-radius: 18rpx;
+  border: 0;
+  font-size: 28rpx;
+  padding: 9rpx 20rpx;
+  margin-top: 32rpx;
+}
+.button::after,
+.secondary::after {
+  border: 0;
+}
+.button[disabled] {
+  background: #bac8c1;
+  color: #fff;
+}
+.secondary {
+  background: #edf1eb;
+  color: #34564b;
+  border-radius: 18rpx;
+  font-size: 26rpx;
+  margin-top: 20rpx;
+  padding: 9rpx 20rpx;
+}
+.badge {
+  display: inline-block;
+  background: #edf2eb;
+  color: #426653;
+  border-radius: 12rpx;
+  padding: 10rpx 16rpx;
+  font-size: 22rpx;
+}
+.error {
+  padding: 24rpx;
+  border-radius: 18rpx;
+  background: #fff2e8;
+  color: #986846;
+  font-size: 25rpx;
+  line-height: 1.7;
+  margin-top: 24rpx;
+}
+.empty {
+  text-align: center;
+  padding: 80rpx 20rpx;
+  color: #899184;
+  line-height: 2;
+}
+.detail-line {
+  padding: 24rpx 0;
+  border-bottom: 1rpx solid #eef0eb;
+}
+.note {
+  color: #8b9389;
+  font-size: 23rpx;
+  line-height: 1.8;
+  margin-top: 28rpx;
+}
+.footer-space {
+  height: 40rpx;
+}
+.demo {
+  font-size: 21rpx;
+  color: #9a825f;
+  margin-top: 14rpx;
+}

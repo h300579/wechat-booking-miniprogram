@@ -1,0 +1,12 @@
+<view class="page merchant">
+<view class="eyebrow">STORE / 门店工作台</view>
+<view class="title">商家工作台</view>
+<view class="subtitle">北京时间 · 单店预约管理</view>
+<view wx:if="{{error}}" class="error">{{error}}<button class="secondary" bindtap="load" disabled="{{busy}}">重新加载</button></view>
+<view wx:if="{{denied}}" class="empty">当前账号没有商家权限<button class="secondary" bindtap="back">返回我的预约</button></view>
+<view wx:if="{{loading}}" class="empty">正在读取门店数据…</view>
+<block wx:if="{{payload}}"><view class="card"><view class="row"><text>{{payload.today}}</text><text class="badge">{{payload.stateLabel}}</text></view><view class="metrics"><view><view class="number">{{payload.activeCount}}</view><text class="muted">今日有效预约</text></view><view><view class="number">{{payload.upcomingCount}}</view><text class="muted">今日待开始</text></view></view></view>
+<view class="card" wx:if="{{payload.next}}" bindtap="openDetail" data-id="{{payload.next.appointmentId}}"><view class="eyebrow">今日下一笔</view><view class="strong">{{payload.next.timeLabel}}</view><view class="service">{{payload.next.serviceName}}</view><text class="muted">{{payload.next.customerLabel}} →</text></view><view class="empty" wx:else>今日暂无后续预约</view>
+<button class="button" bindtap="openList">查看今日预约</button><button class="secondary" bindtap="openDay">管理接单日期</button><view class="actions"><button wx:if="{{payload.canClose}}" class="secondary" bindtap="closeDay" loading="{{busy}}" disabled="{{busy || loading}}">停止当天接单</button><button wx:if="{{payload.canReopen}}" class="button" bindtap="reopenDay" loading="{{busy}}" disabled="{{busy || loading}}">恢复当天接单</button></view></block>
+<button wx:if="{{payload}}" class="secondary refresh" bindtap="load" disabled="{{busy || loading}}">刷新数据</button>
+</view>

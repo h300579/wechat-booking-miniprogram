@@ -1,0 +1,16 @@
+{
+  "booking": {
+    "entry": "server/index.ts",
+    "runtime": "Nodejs20.19",
+    "timeout": 5,
+    "memorySize": 256,
+    "handler": "index.main"
+  },
+  "operations": {
+    "entry": "server/ops-entry.ts",
+    "runtime": "Nodejs20.19",
+    "timeout": 60,
+    "memorySize": 256,
+    "handler": "index.main"
+  }
+}

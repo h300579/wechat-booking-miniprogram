@@ -1,0 +1,21 @@
+node_modules/
+.env*
+!.env.example
+work/
+*.log
+miniprogram/**/*.js
+cloudfunctions/*/index.js
+cloudfunctions/*/node_modules/
+
+# Local editor/OS state and private environment configuration
+.DS_Store
+project.private.config.json
+config/*.local.json
+config/production.json
+coverage/
+
+# Generated files may embed the selected local environment
+project.config.json
+miniprogram/config/env.ts
+miniprogram/config/catalog.ts
+config/development.json

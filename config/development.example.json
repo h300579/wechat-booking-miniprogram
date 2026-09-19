@@ -1,0 +1,86 @@
+{
+  "environmentId": "demo-environment-not-deployed",
+  "appId": "wx0000000000000000",
+  "stage": "development",
+  "timeZone": "Asia/Shanghai",
+  "resourceId": "main",
+  "bookingDays": 30,
+  "stepMinutes": 30,
+  "maxFuture": 3,
+  "maxDailyEntries": 100,
+  "maintenance": false,
+  "newBookingsEnabled": true,
+  "storeName": "示例预约门店",
+  "contactPhone": "",
+  "services": [
+    {
+      "_id": "service-30",
+      "name": "轻享护理",
+      "durationMinutes": 30,
+      "priceFen": 9900,
+      "status": "ACTIVE",
+      "version": 1
+    },
+    {
+      "_id": "service-60",
+      "name": "深度护理",
+      "durationMinutes": 60,
+      "priceFen": 19900,
+      "status": "ACTIVE",
+      "version": 1
+    },
+    {
+      "_id": "service-90",
+      "name": "全程护理",
+      "durationMinutes": 90,
+      "priceFen": 29900,
+      "status": "ACTIVE",
+      "version": 1
+    }
+  ],
+  "businessHours": [
+    {
+      "dayOfWeek": 0,
+      "openTime": "10:00",
+      "closeTime": "19:00",
+      "enabled": true
+    },
+    {
+      "dayOfWeek": 1,
+      "openTime": "10:00",
+      "closeTime": "19:00",
+      "enabled": true
+    },
+    {
+      "dayOfWeek": 2,
+      "openTime": "10:00",
+      "closeTime": "19:00",
+      "enabled": true
+    },
+    {
+      "dayOfWeek": 3,
+      "openTime": "10:00",
+      "closeTime": "19:00",
+      "enabled": true
+    },
+    {
+      "dayOfWeek": 4,
+      "openTime": "10:00",
+      "closeTime": "19:00",
+      "enabled": true
+    },
+    {
+      "dayOfWeek": 5,
+      "openTime": "10:00",
+      "closeTime": "19:00",
+      "enabled": true
+    },
+    {
+      "dayOfWeek": 6,
+      "openTime": "10:00",
+      "closeTime": "19:00",
+      "enabled": true
+    }
+  ],
+  "exampleOnly": true
+}

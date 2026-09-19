@@ -1,0 +1,50 @@
+{
+  "users": {
+    "read": "false",
+    "write": "false"
+  },
+  "wechat_accounts": {
+    "read": "false",
+    "write": "false"
+  },
+  "services": {
+    "read": "false",
+    "write": "false"
+  },
+  "business_hours": {
+    "read": "false",
+    "write": "false"
+  },
+  "resource_days": {
+    "read": "false",
+    "write": "false"
+  },
+  "appointments": {
+    "read": "false",
+    "write": "false"
+  },
+  "idempotency_records": {
+    "read": "false",
+    "write": "false"
+  },
+  "rate_limits": {
+    "read": "false",
+    "write": "false"
+  },
+  "upload_intents": {
+    "read": "false",
+    "write": "false"
+  },
+  "admin_roles": {
+    "read": "false",
+    "write": "false"
+  },
+  "audit_logs": {
+    "read": "false",
+    "write": "false"
+  },
+  "settings": {
+    "read": "false",
+    "write": "false"
+  }
+}

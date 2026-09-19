@@ -1,0 +1,14 @@
+<view class="page merchant">
+<view class="eyebrow">STORE / 门店工作台</view>
+<view class="title">接单日历</view>
+<view class="subtitle">北京时间 · 单店预约管理</view>
+<view wx:if="{{error}}" class="error">{{error}}<button class="secondary" bindtap="load" disabled="{{busy}}">重新加载</button></view>
+<view wx:if="{{denied}}" class="empty">当前账号没有商家权限<button class="secondary" bindtap="back">返回我的预约</button></view>
+<view wx:if="{{loading}}" class="empty">正在读取门店数据…</view>
+<picker mode="date" value="{{date}}" bindchange="changeDate" disabled="{{busy || loading}}"><view class="card row"><text class="strong">{{date || '选择日期'}}</text><text class="muted">更换日期 ▾</text></view></picker><block wx:if="{{payload}}"><view class="card"><view class="row"><text class="strong">{{payload.stateLabel}}</text><text class="muted">{{payload.manuallyClosed ? '手动停止接单' : ''}}</text></view><view class="subtitle">关闭日期只停止新预约，不会取消已有预约。历史日期仅供查看。</view><view class="actions"><button wx:if="{{payload.canClose}}" class="secondary" bindtap="closeDay" loading="{{busy}}" disabled="{{busy || loading}}">停止当天接单</button><button wx:if="{{payload.canReopen}}" class="button" bindtap="reopenDay" loading="{{busy}}" disabled="{{busy || loading}}">恢复当天接单</button></view></view><view class="section-title">当天预约 · 含已取消记录</view></block><view wx:if="{{listError}}" class="error">{{listError}}</view>
+<view wx:for="{{items}}" wx:key="appointmentId" class="card {{item.status === 'CANCELLED' ? 'cancelled' : ''}}" data-id="{{item.appointmentId}}" bindtap="openDetail">
+<view class="row"><text class="strong">{{item.timeLabel}}</text><text class="badge">{{item.statusLabel}}</text></view>
+<view class="service">{{item.serviceName}}</view><view class="row"><text class="muted">{{item.customerLabel}}</text><text class="muted">查看详情 →</text></view></view>
+<view wx:if="{{payload && !loading && !listError && !items.length}}" class="empty">当天暂无预约</view>
+<button wx:if="{{payload}}" class="secondary refresh" bindtap="load" disabled="{{busy || loading}}">刷新数据</button>
+</view>

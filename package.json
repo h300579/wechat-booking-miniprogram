@@ -1,0 +1,39 @@
+{
+  "name": "appointment-miniprogram",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "typecheck": "tsc -p tsconfig.json --noEmit && tsc -p tsconfig.server.json --noEmit && tsc -p tsconfig.tools.json --noEmit",
+    "test": "node --import tsx --test tests/*.test.*",
+    "check": "npm run build && npm run typecheck && npm test",
+    "cloud:plan": "tsx scripts/manage.ts plan",
+    "cloud:migrate": "tsx scripts/manage.ts migrate",
+    "cloud:seed": "tsx scripts/manage.ts seed",
+    "cloud:deploy": "tsx scripts/manage.ts deploy",
+    "cloud:reconcile": "tsx scripts/manage.ts reconcile",
+    "cloud:maintenance": "tsx scripts/manage.ts maintenance",
+    "cloud:daily": "tsx scripts/manage.ts daily",
+    "cloud:backup": "tsx scripts/manage.ts backup",
+    "release:check": "tsx scripts/release-check.ts",
+    "cloud:cleanup": "tsx scripts/manage.ts cleanup"
+  },
+  "devDependencies": {
+    "@cloudbase/manager-node": "5.8.6",
+    "@types/node": "22.18.6",
+    "esbuild": "0.25.10",
+    "miniprogram-api-typings": "5.2.3",
+    "prettier": "3.6.2",
+    "sharp": "0.35.4",
+    "tsx": "4.20.6",
+    "typescript": "5.9.3"
+  },
+  "dependencies": {
+    "@cloudbase/node-sdk": "3.18.3",
+    "wx-server-sdk": "4.0.2"
+  },
+  "overrides": {
+    "axios@<1": "0.33.0"
+  },
+  "type": "module"
+}
